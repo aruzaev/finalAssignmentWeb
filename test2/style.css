@@ -1,0 +1,167 @@
+body {
+    background-color: black;
+}
+
+#sun {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: url(sun.png) no-repeat center center;
+    background-size: contain;
+    box-shadow: 0 0 100px 20px #fff;
+}
+
+.planet {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#mercury {
+    top: 50%;
+    left: 5%;
+    background: url(mercury.png) no-repeat center center;
+}
+
+#venus {
+    top: 50%;
+    left: 12%;
+    background: url(venus.png) no-repeat center center;
+}
+
+#earth {
+    top: 50%;
+    left: 19%;
+    background: url(earth.png) no-repeat center center;
+}
+
+#mars {
+    top: 50%;
+    left: 26%;
+    background: url(mars.png) no-repeat center center;
+}
+
+#jupiter {
+    top: 50%;
+    left: 37%;
+    background: url(jupiter.png) no-repeat center center;
+}
+
+#saturn {
+    top: 50%;
+    left: 52%;
+    background: url(saturn.png) no-repeat center center;
+    background-size: 100% auto;
+}
+
+#saturn::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: black;
+    box-shadow: 0 0 30px 10px #fff;
+    z-index: -1;
+}
+
+#saturn::after {
+    content: "";
+    position: absolute;
+    top: calc(50% - 2px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 4px;
+    background-color: #fff;
+}
+
+#uranus {
+    top: 50%;
+    left: 70%;
+    background: url(uranus.png) no-repeat center center;
+}
+
+#neptune {
+    top: 50%;
+    left: 77%;
+    background: url(neptune.png) no-repeat center center;
+}
+
+.planet:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 20px 5px #fff;
+}
+
+#hamburger-menu {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1;
+}
+
+#menu-icon {
+    width: 30px;
+    height: 20px;
+    position: relative;
+    margin: 0 auto 10px auto;
+    cursor: pointer;
+}
+
+#menu-icon::before,
+#menu-icon::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transition: transform 0.2s;
+}
+
+#menu-icon::before {
+    top: 0;
+}
+
+#menu-icon::after {
+    bottom: 0;
+}
+
+#menu-icon.open::before {
+    transform: translateY(8px) rotate(45deg);
+}
+
+#menu-icon.open::after {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+#menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+}
+
+#menu li {
+    margin-bottom: 10px;
+    text-align: right;
+}
+
+#menu li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+}
+
+#hamburger-menu.open #menu {
+    display: block;
+}

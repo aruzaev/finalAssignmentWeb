@@ -1,3 +1,24 @@
+@font-face {
+    font-family: 'Ubuntu Regular';
+    src: url(../fonts/ubuntu/Ubuntu-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Ubuntu Bold';
+    src: url(../fonts/ubuntu/Ubuntu-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'Ubuntu Italic';
+    src: url(../fonts/ubuntu/Ubuntu-Italic.ttf);
+}
+
+@font-face {
+    font-family: 'Orbitron Regular';
+    src: url(../fonts/orbitron/Orbitron-Regular.ttf);
+}
+
+
 *,
 *::after,
 *::before{
@@ -189,53 +210,96 @@ header {
     }
 }
 
+.background {
+    background-image: url("../images/earth-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    background-attachment: fixed;
+}
+
+.blur {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100vh;
+    width: 100%;
+    backdrop-filter: blur(5px);
+    height: 100vh;
+    width: 100%;
+}
+
 .earth {
     padding-top: 30px;
+    font-family: 'Ubuntu Regular', sans-serif;
 }
 
 .earth-mainp {
-    width: 95%;
+    max-width: 700px;
+    max-height: 400px;
+    overflow-y: auto;
     margin: auto;
+    margin-bottom: 15px;
     display: block;
-    overflow: auto;
-    text-align: center;
-    height: 400px;
-    width: 750px;
     background-color: black;
-
+    border-radius: 15px;
+    -webkit-box-shadow: 5px 5px 15px 1px #000000; 
+    box-shadow: 5px 5px 15px 1px #000000;
 }
 
 .earth-mainp p {
     
     font-size: 20px;
-    text-align: center;
-    padding-left: 120px;
-    margin-right: 100px;
-    margin-top: 75px;   
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    color: white;
+    font-size: 20px;
+
+}
+
+.earth-mainp h3 {
+    font-size: 20px;
+    text-align: center;    
+    padding-right: 10px;
+    padding-bottom: 10px;
     height: 100%;
     color: white;
-
+    font-size: 30px;
 }
 
-h1 {
-    font-size: 40px;
+.earth-title {
+    max-width: 400px;
+    max-height: 150px;
+    margin: auto;
+    margin-top: 90px;
+    margin-bottom: 15px;
+    display: block;
+    overflow: auto;
     text-align: center;
-    padding-left: 120px;
-    margin-right: 100px;
-    margin-top: 75px;   
-    color: white;
+    align-items: center;
     background-color: black;
+    border-radius: 15px;
+    -webkit-box-shadow: 5px 5px 15px 1px #000000; 
+    box-shadow: 5px 5px 15px 1px #000000;
 }
 
+.earth-title h1 {
+    font-size: 40px;
+    padding-bottom: 5px;
+    color: white;
+}
+
+.earth-image {}
 
 .earth-image img {
     max-height: 600px;
     max-width: 600px;
     float: left;
-    padding-left: 120px;
+    padding-left: 10%;
     margin-right: 100px;
     margin-top: 75px;
+    border-radius: 60%;
+    box-shadow: 0 0 0 3px #e78267;
+
 }

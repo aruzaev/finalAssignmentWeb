@@ -1,3 +1,33 @@
+@font-face {
+  font-family: 'Ubuntu Regular';
+  src: url(../fonts/ubuntu/Ubuntu-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Ubuntu Bold';
+  src: url(../fonts/ubuntu/Ubuntu-Bold.ttf);
+}
+
+@font-face {
+  font-family: 'Ubuntu Italic';
+  src: url(../fonts/ubuntu/Ubuntu-Italic.ttf);
+}
+
+@font-face {
+  font-family: 'Orbitron Regular';
+  src: url(../fonts/orbitron/Orbitron-Regular.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Ubuntu Regular', sans-serif;
+}
+
 #container {
     position: relative;
     height: 100vh;
@@ -13,6 +43,23 @@
     background-size: cover;
     transition: all 0.5s ease;
     transform-origin: center center;
+  }
+
+  .planet:hover img {
+    filter: blur(2px);
+  }
+
+  .planet:hover::after {
+    content: attr(data-name);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 12px;
   }
   
   #sun {
@@ -31,35 +78,30 @@
     top: 28%;
     left: 44%;
     background-image: url("../images/mercury.png");
-    transform: rotate(20deg);
   }
   
   #venus {
     top: 20%;
     left: 33%;
     background-image: url("../images/venus.png");
-    transform: rotate(45deg);
   }
   
   #earth {
     top: 10%;
     left: 20%;
     background-image: url("../images/earth.png");
-    transform: rotate(80deg);
   }
   
   #mars {
     top: 5%;
     left: 5%;
     background-image: url("../images/mars.png");
-    transform: rotate(110deg);
   }
   
   #jupiter {
     top: 30%;
     left: 10%;
     background-image: url("../images/jupiter.png");
-    transform: rotate(140deg);
   }
   
   #saturn {
@@ -67,21 +109,19 @@
     left: 20%;
     width: 135px;
     background-image: url("../images/saturn.jpg");
-    transform: rotate(170deg);
   }
   
   #uranus {
     top: 90%;
     left: 50%;
     background-image: url("../images/uranus.png");
-    transform: rotate(200deg);
+
   }
   
   #neptune {
     top: 80%;
     left: 80%;
     background-image: url("../images/neptune.png");
-    transform: rotate(230deg);
   }
   
   .planet:hover {

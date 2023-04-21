@@ -1,3 +1,7 @@
+@font-face {
+    font-family: 'Orbitron Regular';
+    src: url(../fonts/orbitron/static/Orbitron-Regular.ttf);
+}
 
 div.parent {
     position: relative;
@@ -42,13 +46,21 @@ p.intro {
 }
 
 .background {
-    background-image: url("../images/deepspacebackground.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    width: 100%;
-    background-attachment: fixed;
+    background: url(../images/deepspacebackground.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.background h1 {
+    font-family: 'Orbitron Regular', sans-serif;
+}
+
+.blur h1 {
+    padding-top: 250px;
+    color: white;
+    font-size: 200px;
 }
 
 .space-news+.rss-feed {

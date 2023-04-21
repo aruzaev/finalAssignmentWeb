@@ -1,5 +1,5 @@
 .background {
-    background-image: url("../images/earth-background.jpg");
+    background-image: url("../images/mars-background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -8,12 +8,12 @@
     background-attachment: fixed;
 }
 
-.earth {
+.mars {
     padding-top: 30px;
     font-family: 'Ubuntu Regular', sans-serif;
 }
 
-.earth-mainp {
+.mars-mainp {
     max-width: 700px;
     max-height: 400px;
     overflow-y: auto;
@@ -26,7 +26,7 @@
     box-shadow: 5px 5px 15px 1px #000000;
 }
 
-.earth-mainp p {
+.mars-mainp p {
     
     font-size: 24px;
     padding-left: 20px;
@@ -36,7 +36,7 @@
 
 }
 
-.earth-mainp h3 {
+.mars-mainp h3 {
     font-size: 20px;
     text-align: center;    
     padding-right: 10px;
@@ -46,7 +46,7 @@
     font-size: 30px;
 }
 
-.earth-title {
+.mars-title {
     max-width: 400px;
     max-height: 150px;
     margin: auto;
@@ -62,14 +62,14 @@
     box-shadow: 5px 5px 15px 1px #000000;
 }
 
-.earth-title h1 {
+.mars-title h1 {
     font-size: 40px;
     padding-bottom: 5px;
     color: white;
 }
 
 
-.earth-image img {
+.mars-image img {
     max-height: 900px;
     max-width: 900px;
     float: left;

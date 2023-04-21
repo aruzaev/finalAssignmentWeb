@@ -1,176 +1,7 @@
-@font-face {
-    font-family: 'Ubuntu Regular';
-    src: url(../fonts/ubuntu/Ubuntu-Regular.ttf);
-}
 
-@font-face {
-    font-family: 'Ubuntu Bold';
-    src: url(../fonts/ubuntu/Ubuntu-Bold.ttf);
-}
-
-@font-face {
-    font-family: 'Ubuntu Italic';
-    src: url(../fonts/ubuntu/Ubuntu-Italic.ttf);
-}
-
-@font-face {
-    font-family: 'Orbitron Regular';
-    src: url(../fonts/orbitron/Orbitron-Regular.ttf);
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Ubuntu Regular', sans-serif;
-}
-
-a {
-    text-decoration: none;
-}
-
-li {
-    list-style: none;
-}
-
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-    background: black;
-    z-index: 1;
-
-}
-
-.nav-links a {
-    color: white;
-    font-size: 20px;
-}
-
-.logo {
-    font-size: 40px;
-}
-
-.logo img {
-    width: 50px;
-    height: 50px;
-}
-
-.menu {
-    display: flex;
-    gap: 1em;
-    font-size: 18px;
-}
-
-.menu li:hover {
-    background-color: orange;
-    border-radius: 5px;
-    transition: 0.3s ease;
-}
-
-.menu li {
-    padding: 5px 14px;
-}
-
-.planets {
+div.parent {
     position: relative;
-}
-
-.dropdown {
-    background-color: black;
-    padding: 1em 0;
-    position: absolute;
-    display: none;
-    border-radius: 8px;
-    top: 100%;
-    left: 0;
-
-}
-
-.planets:hover .dropdown,
-.dropdown:hover {
-    display: block;
-}
-
-
-.dropdown li+li {
-    /* li + li means all li's except the first one */
-    margin-top: 10px;
-}
-
-.dropdown li {
-    padding: 0.5em 1em;
-    width: 8em;
-    text-align: center;
-}
-
-.dropdown li:hover {
-    background-color: orange;
-    border-radius: 5px;
-    transition: 0.3s ease;
-}
-
-input[type="checkbox"] {
-    display: none;
-}
-
-.hamburger {
-    display: none;
-    font-size: 24px;
-    user-select: none;
-}
-
-.mobile-menu {
-    display: none;
-}
-
-@media (max-width: 768px) {
-
-    .menu {
-        position: absolute;
-        background-color: black;
-        right: 0;
-        left: 0;
-        text-align: center;
-        padding: 16px 0;
-        display: none;
-    }
-
-    .mobile-menu {
-        display: block;
-    }
-
-    .menu li+li {
-        margin-top: 12px;
-    }
-
-    input[type="checkbox"]:checked~.menu {
-        display: block;
-    }
-
-    .hamburger {
-        display: block;
-    }
-
-    .planets:hover .dropdown {
-        display: block;
-    }
-
-    .dropdown {
-        left: 50%;
-        top: 30px;
-        transform: translateX(-50%);
-    }
-
-    .dropdown li:hover {
-        background-color: orange;
-        border-radius: 5px;
-        transition: 0.3s ease;
-    }
+    width: 100%;
 }
 
 .main-content {
@@ -187,7 +18,7 @@ input[type="checkbox"] {
     color: black;
 }
 
-.main-content p {
+p.intro {
     font-size: 20px;
     width: 90%;
     margin-bottom: 40px;
@@ -220,73 +51,12 @@ input[type="checkbox"] {
     background-attachment: fixed;
 }
 
-.blur {
-    background-color: rgba(0, 0, 0, 0.5);
-    height: 100vh;
-    width: 100%;
-    backdrop-filter: blur(5px);
-    height: 100vh;
-    width: 100%;
-}
-
-.slider-container {
-    background: linear-gradient(149deg, rgb(247, 0, 255) 0%, rgb(255, 145, 0) 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-}
-
-.slider {
-    width: 100%;
-    max-width: 1200px;
-    height: 100%;
-    max-height: 600px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-
-.slides {
-    display: flex;
-    overflow-x: scroll;
-    position: relative;
-    scroll-behavior: smooth;
-    scroll-snap-type: x mandatory;
-}
-
-.slide:nth-of-type(even) {
-    background-color: #fff;
-}
-
-.slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-    width: 100%;
-    height: 400px;
-    margin-right: 0px;
-    box-sizing: border-box;
-    background: white;
-    transform-origin: center center;
-    transform: scale(1);
-    scroll-snap-align: center;
-}
-
-.slide__content {
-    font-size: 30px;
-    font-family: 'Ubuntu Bold', sans-serif;
-    color: black;
-    text-align: center;
-}
-
-.space-news + .rss-feed {
+.space-news+.rss-feed {
     margin-right: 60px;
     justify-content: center;
-    
+
 }
+
 section::after {
     clear: both;
     content: "";
@@ -315,18 +85,54 @@ section::after {
     margin-top: 20px;
 }
 
-footer {
-    background-color: black;
-    color: #fff;
-    font-size: 16px;
-    padding: 20px 0;
+.solarReasons {
+    /*centering the div*/
+    columns: 3;
+    height: 300px;
+}
+.solarReasons ul {
+    width: 70%;
+}
+.solarReasons li {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: start;
+    font-size: 15px;
+    color: black;
     text-align: center;
+    width: 263px;
+    max-height: 360px;
+
 }
 
-.footer-right {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.solarReasons p{
+    font-size: 15px;
+    height: 60px;
+}
+
+.solarReasons img { 
+    flex: 0 0 auto;
+    width: 100px;
+    height: 100px;
+}
+.footer {
+    position: relative;
+    width: 500px;
+    height: 10%;
+    padding-top: 600px;
+    height: 70px;
+    width: 100px;
+    bottom: 10px;
+    border: 3px solid #8AC007;
+}
+
+.footer p {
+    font-size: 20px;
+    font-family: 'Ubuntu Bold', sans-serif;
+    margin-bottom: 40px;
+    width: 500px;
+    color: black;
+    text-align: center;
 }

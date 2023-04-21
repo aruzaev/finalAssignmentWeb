@@ -36,8 +36,8 @@ body {
   
   .planet {
     position: absolute;
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     background-repeat: no-repeat;
     background-size: cover;

@@ -1,4 +1,2 @@
 # finalAssignmentWeb
 
-
-gang gang
